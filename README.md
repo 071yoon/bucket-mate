@@ -1,28 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bucket Mate
 
-## Getting Started
+Manage Bucket List with Friends
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
+```shell
+# install
+yarn
+
+# test in local
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# build
+yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Preparation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> you need firebase database ready
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Required Firebase Table
+
+1. Authentication
+2. Firebase Database
+
+> make sure to put calendar/memo/todo database
+
+> fill your own firebase key
+
+```shell
+# .env
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=
+NEXT_PUBLIC_FIREBASE_CERT_ONE=
+NEXT_PUBLIC_FIREBASE_CERT_TWO=
+```
 
 ## TODO
-
-[ ] 게시날짜 만들기
-[ ] 최신순 정렬
-[ ] 댓글 추가
-[ ] 누군지 피아식별하기

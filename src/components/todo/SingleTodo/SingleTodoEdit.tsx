@@ -34,7 +34,7 @@ export default function SingleTodoEdit({
       />
       <Container>
         <TextField
-          label="할거"
+          label="todo"
           variant="outlined"
           fullWidth
           value={title}
@@ -51,7 +51,7 @@ export default function SingleTodoEdit({
         >
           <TodoTypeSelect type={type} setType={setType} />
           <TextField
-            label="내용"
+            label="content"
             variant="outlined"
             fullWidth
             multiline
@@ -98,7 +98,7 @@ export default function SingleTodoEdit({
           {todo.done && (
             <div
               style={{ marginTop: "0.4rem" }}
-            >{`완료일자: ${doneDate.getFullYear()}-${doneDate.getMonth()}-${doneDate.getDate()}`}</div>
+            >{`Complete Date: ${doneDate.getFullYear()}-${doneDate.getMonth()}-${doneDate.getDate()}`}</div>
           )}
         </SingleTodoFooter>
       </Container>

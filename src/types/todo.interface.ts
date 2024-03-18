@@ -11,10 +11,10 @@ export interface TodoInterface {
 }
 
 export const todoTypes: TodoType[] = [
-  "🏃 운동",
-  "🎸 기타",
-  "🎨 문화",
-  "🌎 여행",
+  "🏃 Exercise",
+  "🎸 Extra",
+  "🎨 Culture",
+  "🌎 Travel",
 ];
 
-export type TodoType = "🏃 운동" | "🎸 기타" | "🎨 문화" | "🌎 여행";
+export type TodoType = "🏃 Exercise" | "🎸 Extra" | "🎨 Culture" | "🌎 Travel";

@@ -3,6 +3,7 @@ import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { TodoInterface } from "@/types/todo.interface";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SingleTodo from "./SingleTodo/SingleTodo";
+import { setMonthFormat } from "@/utils/setMonthFormat";
 
 export default function ClearedTodo({
   todoList,
@@ -37,6 +38,7 @@ export default function ClearedTodo({
       month: date.getMonth() + 1,
     };
   });
+
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
       {months.toReversed().map((month) => {
@@ -62,7 +64,7 @@ export default function ClearedTodo({
               id="panel1a-header"
             >
               <h2 style={{ margin: "0.6rem 0 0.4rem 0" }}>
-                {month.year}년 {month.month}월
+                {month.year}.{setMonthFormat(month.month)}
               </h2>
             </AccordionSummary>
             <AccordionDetails

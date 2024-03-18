@@ -7,7 +7,6 @@ import AddTodo from "./AddTodo";
 import { todoTypes } from "@/types/todo.interface";
 import Chips from "./Chips";
 import ClearedTodo from "./ClearedTodo";
-import { getDDay } from "@/utils/getDDay";
 import TodoNotDone from "./TodoNotDone";
 
 export default function TodoContainer() {
@@ -21,10 +20,6 @@ export default function TodoContainer() {
     updateDoneDate,
   } = useTodoList();
   const [todoFilter, setTodoFilter] = useState<TodoType[]>(todoTypes);
-
-  const dDay = useMemo(() => {
-    return getDDay();
-  }, []);
 
   const isMounted = useRef(false);
 
